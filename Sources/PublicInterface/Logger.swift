@@ -14,7 +14,9 @@ public protocol Logger {
 
 public class ConsoleLogger: Logger {
     public func log(_ message: String) {
+        #if DEBUG
         print(message)
+        #endif
     }
 }
 
